@@ -31,5 +31,6 @@ class FibonacciNumbers
 			twoNumbersBefore = lastNumber;
 			lastNumber = temp + twoNumbersBefore;
 		}
+        Console.WriteLine();
 	}
 }
