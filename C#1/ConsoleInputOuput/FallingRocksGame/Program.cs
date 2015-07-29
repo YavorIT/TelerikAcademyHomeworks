@@ -143,21 +143,28 @@ class FallingRocksGame
 
                 symbols.Insert(symbols.Count, (char)rock[rockSelection]);
 
-                if (rockSelection >= 0 && rockSelection < 3)
+                switch (rockSelection)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                }
-                if (rockSelection >= 3 && rockSelection < 6)
-                {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                }
-                if (rockSelection >= 6 && rockSelection < 9)
-                {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                }
-                if (rockSelection >= 9 && rockSelection < 11)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    case 0:
+                    case 1:
+                    case 2:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        break;
                 }
 
                 Console.SetCursorPosition(rockPlace.col, rockPlace.row);
@@ -205,21 +212,29 @@ class FallingRocksGame
                 if (thisRock.row < Console.WindowHeight)
                 {
                     Console.SetCursorPosition(thisRock.col, thisRock.row);
-                    if (colors[i] >= 0 && colors[i] < 3)
+
+                    switch (colors[i])
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                    }
-                    if (colors[i] >= 3 && colors[i] < 6)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                    }
-                    if (colors[i] >= 6 && colors[i] < 9)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                    }
-                    if (colors[i] >= 9 && colors[i] < 11)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        case 0:
+                        case 1:
+                        case 2:
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            break;
+                        case 9:
+                        case 10:
+                        case 11:
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            break;
                     }
 
                     Console.Write(symbols[i]);
