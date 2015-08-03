@@ -73,7 +73,7 @@ class FallingRocksGame
         int density = 20;
         int minDensity = 19;
         int startTime = Environment.TickCount;
-        //  int sleepTime = 150;
+       //   int sleepTime = 1500;
         int points = 0;
 
         Position[] directions = new Position[]
@@ -269,7 +269,8 @@ class FallingRocksGame
                 waitTime -= 1000;
                 minDensity--;
             }
-            //   Thread.Sleep(sleepTime);  I'm not using the Thread.Sleep method because this will cause my dwarf move at the same 
+
+            //   Thread.Sleep(sleepTime);  //I'm not using the Thread.Sleep method because this will cause my dwarf move at the same 
             //                             time as the rocks are falling.
             //                             That's why i use the "for" cycle to take some time between the falling so that i can move my dwarf faster.
             //                             If you want you can change the settings and make the program use Thread.Sleep!
