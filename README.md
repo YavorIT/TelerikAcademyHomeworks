@@ -1,4 +1,4 @@
-# TelerikAcademyHomeworks
+# TelerikHomeworksBefore
 
 
-All of my Homeworks from the academy
+All of my Homeworks before the academy
