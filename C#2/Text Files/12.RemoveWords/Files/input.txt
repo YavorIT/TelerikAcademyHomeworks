@@ -1,0 +1,2 @@
+Delete the words: car, word, airplane.
+Don't delete: radio, TV, cat.

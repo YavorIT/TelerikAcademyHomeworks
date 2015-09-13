@@ -1,0 +1,3 @@
+start the program here and then start reading
+the text form the start to the end!
+startstring is Starting to finish.

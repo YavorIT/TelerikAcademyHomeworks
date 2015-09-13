@@ -1,0 +1,4 @@
+car
+word
+airplane
+idiot
