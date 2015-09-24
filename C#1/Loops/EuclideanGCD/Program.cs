@@ -10,6 +10,35 @@ using System;
 
 class EuclideanGCD
 {
+    static int GCD (int first, int second)
+    {
+        int biggerNumber;
+        int nextNumber;
+        int remainder;
+        int temp;
+        
+        if(first > second)
+        {
+            biggerNumber = first;
+            nextNumber = second;
+        }
+        else
+        {
+            biggerNumber = second;
+            nextNumber = first;
+        }
+
+        remainder = biggerNumber % nextNumber;
+        while(remainder != 0)
+        {
+            temp = nextNumber;
+            nextNumber = biggerNumber % nextNumber;
+            biggerNumber = temp;
+            remainder = biggerNumber % nextNumber;
+        }
+
+        return nextNumber;
+    }
     static void Main()
     {
         Console.Write ("Enter the first integer: ");
@@ -18,54 +47,6 @@ class EuclideanGCD
         Console.Write("Enter the second integer: ");
         int secondNumber = int.Parse(Console.ReadLine());
 
-        int firstRemainder = 0;
-        int remainder = 0;
-
-        if (firstNumber > secondNumber)
-        {
-            firstRemainder = firstNumber % secondNumber;
-
-            if (firstRemainder == 0)
-            {
-                Console.WriteLine("Numbers are equal so the GCD is: {0}", firstNumber);
-                return;
-            }
-
-            remainder = secondNumber % firstRemainder;
-            while (true)
-            {
-
-                if (remainder == 0)
-                {
-                    break;
-                }
-                firstRemainder = remainder;
-                remainder = firstRemainder % remainder;
-            }
-        }
-        else
-        {
-            firstRemainder = secondNumber % firstNumber;
-
-            if (firstRemainder == 0)
-            {
-                Console.WriteLine("Numbers are equal so the GCD is: {0}", firstNumber);
-                return;
-            }
-
-            remainder = firstNumber % firstRemainder;
-            while (true)
-            {
-
-                if (remainder == 0)
-                {
-                    break;
-                }
-                firstRemainder = remainder;
-                remainder = firstRemainder % remainder;
-            }
-        }
-
-        Console.WriteLine("The GCD is: {0}", firstRemainder);
+        Console.WriteLine("The GCD is: {0}", GCD (firstNumber, secondNumber));
     }
 }
